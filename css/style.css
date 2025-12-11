@@ -228,12 +228,27 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--light-color);
 }
 
+#projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#projects .col-lg-4,
+#projects .col-md-6 {
+    display: flex;
+    flex-direction: column;
+}
+
 .project-card {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
     position: relative;
     background-color: var(--darker-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -255,6 +270,33 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 1;
     background-color: var(--dark-color);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-body .btn-group {
+    margin-top: auto;
+}
+
+.company-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(246, 114, 128, 0.3);
+}
+
+.company-logo-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.company-logo-link:hover .company-logo {
+    transform: scale(1.1);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(246, 114, 128, 0.5);
 }
 
 .btn-outline-primary {
