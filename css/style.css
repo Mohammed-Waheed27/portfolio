@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@400;600;700;800&family=Fira+Code:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;600;700;800&family=Michroma&family=Montserrat:wght@400;600;700;800&family=Orbitron:wght@400;600;700;800&family=Oxanium:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&family=Rubik:wght@400;500;700;800&family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&family=Teko:wght@500;600;700&display=swap");
 
 /* Global Styles */
+html {
+    overflow-x: hidden;
+}
+
 :root {
     --primary-color: #2E073F; /* Deep purple from the palette */
     --secondary-color: #7B3294; /* Medium purple */
@@ -21,6 +25,7 @@ body {
     color: var(--light-color);
     padding-top: 56px; /* For fixed navbar */
     background-color: var(--darker-color);
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +50,30 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand {
     font-weight: 700;
     color: var(--white-color) !important;
+}
+
+.navbar-brand.navbar-brand-with-portrait {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-brand .site-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 576px) {
+    .navbar-brand .site-logo {
+        width: 34px;
+        height: 34px;
+    }
 }
 
 .nav-link {
@@ -987,6 +1016,12 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
 }
 
+/* External links row (e.g. Real Estate card): sit above card ::before gradient */
+#projects .project-card .card-footer {
+    position: relative;
+    z-index: 3;
+}
+
 .project-section-subtitle {
     color: var(--light-color);
     opacity: 0.8;
@@ -1394,7 +1429,8 @@ body[class*="project-theme-"] .progress-compass__stop:hover {
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 1rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1409,15 +1445,28 @@ body[class*="project-theme-"] .progress-compass__stop:hover {
 .contact-icon {
     width: 50px;
     height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    flex-shrink: 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--gradient-start);
     color: var(--white-color);
     border-radius: 50%;
-    margin-right: 1rem;
     font-size: 1.2rem;
+    line-height: 1;
     transition: all 0.3s ease;
+}
+
+.contact-icon i {
+    flex-shrink: 0;
+}
+
+.contact-text {
+    flex: 1;
+    min-width: 0;
 }
 
 .contact-item:hover .contact-icon {
@@ -1436,6 +1485,8 @@ body[class*="project-theme-"] .progress-compass__stop:hover {
     color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s ease;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .contact-text a:hover {
