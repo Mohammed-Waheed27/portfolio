@@ -162,11 +162,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            navbar.style.padding = '0.5rem 1rem';
             navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
             navbar.style.backgroundColor = 'rgba(16, 16, 16, 0.98)';
         } else {
-            navbar.style.padding = '1rem';
             navbar.style.boxShadow = '';
             navbar.style.backgroundColor = 'rgba(17, 17, 17, 0.95)';
         }

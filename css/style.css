@@ -44,7 +44,12 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     background-color: rgba(17, 17, 17, 0.95) !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+    /* Fixed vertical padding so bar height does not change on scroll (JS used to shrink this) */
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    align-items: center;
 }
 
 .navbar-brand {
