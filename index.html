@@ -34,6 +34,9 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#early-work" data-open-project-tab="early">Early work</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -43,12 +46,27 @@
 
     <!-- Hero Section -->
     <header id="home" class="hero text-center py-5">
-        <div class="container px-4 px-lg-5 my-5">
+        <div class="hero-atmosphere" aria-hidden="true">
+            <div class="hero-aurora hero-aurora--one"></div>
+            <div class="hero-aurora hero-aurora--two"></div>
+            <div class="hero-aurora hero-aurora--three"></div>
+            <div class="hero-orbit-ring hero-orbit-ring--outer"></div>
+            <div class="hero-orbit-ring hero-orbit-ring--inner"></div>
+            <div class="hero-mesh-drift"></div>
+            <div class="hero-sparkles"></div>
+            <div class="hero-scan-sweep"></div>
+        </div>
+        <div class="container px-4 px-lg-5 my-5 hero-content">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8">
-                    <img class="profile-img mb-4" src="img/profielimage.jpg" alt="Mohammed Waheed">
+                    <div class="hero-portrait-wrap mb-4 mx-auto">
+                        <div class="hero-portrait-glow" aria-hidden="true"></div>
+                        <div class="hero-portrait-frame">
+                            <img class="hero-portrait-img" src="img/me/me.jpeg" width="560" height="840" alt="Mohammed Waheed — portrait">
+                        </div>
+                    </div>
                     <h1 class="display-4 fw-bold fade-in-up">Mohammed Waheed</h1>
-                    <p class="lead fade-in-up delay-1">Full-Stack Mobile Developer | Flutter Expert | Freelancer</p>
+                    <p class="lead fade-in-up delay-1">Experienced Flutter Developer · Full-stack mobile · Product &amp; client delivery</p>
                     <div class="social-icons mt-4 fade-in-up delay-2">
                         <a href="https://github.com/Mohammed-Waheed27" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                         <a href="https://www.linkedin.com/in/mohammed-waheed-a887972b1/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
@@ -60,25 +78,47 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="about-section py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center mb-5 reveal reveal-up">
-                    <h2 class="section-heading">About Me</h2>
+                <div class="col-lg-12 text-center mb-4 reveal reveal-up">
+                    <h2 class="section-heading">About</h2>
                     <hr class="divider" />
+                    <p class="about-section-kicker text-uppercase small text-muted mb-0">Same credentials · told like a build log, not a template</p>
                 </div>
             </div>
-            <div class="row align-items-center">
+
+            <div class="row justify-content-center mb-4 mb-lg-5">
+                <div class="col-xl-10 col-lg-11">
+                    <blockquote class="about-slogan-banner reveal reveal-up">
+                        <p class="about-slogan-banner__quote mb-2">If it can be done in software, <span class="about-slogan-banner__accent">I can do it.</span></p>
+                        <p class="about-slogan-banner__sub mb-0">Any shape of product—mobile, cloud-backed, map-heavy, multi-role, AI-adjacent—if the problem is solvable with code and honest engineering, I will chase it down until it ships.</p>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="row align-items-start g-4 g-lg-5">
                 <div class="col-lg-6 reveal reveal-left">
-                    <h3 class="mb-4">Hello! I'm Mohammed Waheed</h3>
-                    <p class="lead">A passionate Full-Stack Mobile Developer with expertise in creating intuitive, user-friendly applications that solve real business problems.</p>
-                    <p>I specialize in Flutter development and have successfully delivered cross-platform mobile solutions for various clients as a freelancer. With a strong understanding of business needs and technical implementation, I bridge the gap between client requirements and functional applications.</p>
-                    <p>My experience includes working on real-world projects like inventory management systems, road service applications, and AI-integrated solutions. I pride myself on delivering high-quality code with exceptional user experiences.</p>
-                    <p>I hold a Bachelor's degree in Computer Science from the University of Assiut and have a strong foundation in Flutter, Dart, Java, Firebase, and RESTful APIs. When I'm not coding, I'm exploring emerging technologies and enhancing my skills through continuous learning.</p>
-                    <a class="btn btn-primary btn-xl mt-3" href="#contact">Get In Touch</a>
+                    <h3 class="about-story-title h4 mb-3">Mohammed Waheed — builder, not a buzzword</h3>
+                    <p class="about-lead text-white-50 mb-4">I am a computer scientist who spends most of his time where users actually press buttons: <strong class="text-white">cross-platform Flutter</strong>, real clients, and products that have to work offline, online, and under pressure.</p>
+
+                    <div class="about-pills d-flex flex-wrap gap-2 mb-4" aria-label="Work surfaces I ship on">
+                        <span class="about-pill">Mobile</span>
+                        <span class="about-pill">APIs &amp; Firebase</span>
+                        <span class="about-pill">Maps &amp; ops</span>
+                        <span class="about-pill">Multi-role UX</span>
+                        <span class="about-pill">Product &amp; content</span>
+                    </div>
+
+                    <p class="mb-3">Clients rarely arrive with a perfect spec—they arrive with pressure, partial data, and a deadline. My job is to <strong class="text-white">compress ambiguity into a roadmap</strong>, then into screens people trust. That is the “full-stack mobile” label, unpacked: ownership from requirement conversations to store-ready builds.</p>
+                    <p class="mb-3">I have shipped inventory and wholesale flows, operations and logistics-style tools, wellness and engagement products, and experiments with <strong class="text-white">ML and smart hardware stories</strong> on the client. The through-line is not one API—it is learning the domain until the software fits how people actually work.</p>
+                    <p class="mb-4"><strong class="text-white">Graduating with a bachelor’s in Computer Science</strong> gave me the spine—structures, systems thinking, and how machines fail when you push them. Years of shipping real apps gave me the muscle: Flutter, Dart, Java, Firebase, REST, Git, and the stubborn habit of testing on real devices instead of slides.</p>
+                    <p class="small text-white-50 mb-4">I still disappear into new stacks and docs the way other people disappear into playlists. If your problem is legal for software to solve, I want to hear the version that keeps you up at night—not the sanitized RFP paragraph.</p>
+                    <a class="btn btn-primary btn-xl" href="#contact">Get in touch</a>
                 </div>
                 <div class="col-lg-6 reveal reveal-right">
-                    <div class="about-details p-4 rounded shadow-sm">
+                    <p class="about-facts-label text-uppercase small text-muted mb-2">Facts at a glance</p>
+                    <div class="about-details about-details--panel p-4 rounded shadow-sm">
                         <div class="row mb-3">
                             <div class="col-sm-6">
                                 <strong><i class="fas fa-user me-2"></i> Name:</strong>
@@ -116,7 +156,8 @@
                                 <strong><i class="fas fa-briefcase me-2"></i> Experience:</strong>
                             </div>
                             <div class="col-sm-6">
-                                Freelance Flutter Developer
+                                <span class="d-block fw-semibold text-white">Experienced Flutter Developer</span>
+                                <span class="small text-white-50 d-block mt-1">Freelance, product-led builds, and multi-app portfolio work—marketplaces, ops, health, education, and more.</span>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -124,7 +165,7 @@
                                 <strong><i class="fas fa-code-branch me-2"></i> Specialization:</strong>
                             </div>
                             <div class="col-sm-6">
-                                Full-Stack Mobile Development
+                                Flutter, mobile architecture &amp; end-to-end delivery
                             </div>
                         </div>
                         <div class="row">
@@ -145,63 +186,97 @@
     <section id="skills" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center mb-5 reveal reveal-up">
-                    <h2 class="section-heading">My Skills</h2>
+                <div class="col-lg-10 col-xl-9 mx-auto text-center mb-4 mb-lg-5 reveal reveal-up">
+                    <h2 class="section-heading">Skills &amp; how I work</h2>
                     <hr class="divider" />
+                    <p class="lead skills-section-lead mb-0">Stack lists look the same on every CV. Here is the split hiring teams actually care about: <strong class="text-white">what I build</strong>, and <strong class="text-white">how I think, communicate, and ship</strong> alongside the code—including content, ideation, and running my own work like a small practice.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-4 reveal reveal-up delay-1">
-                    <div class="card h-100">
+
+            <p class="skills-lane-title text-center text-uppercase small text-muted mb-3 reveal reveal-up"><span class="skills-lane-title-inner">Build &amp; ship</span></p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-1">
+                    <div class="card h-100 position-relative">
                         <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt fa-4x mb-3"></i>
-                            <h3 class="card-title">Mobile Development</h3>
-                            <p class="card-text">Flutter, Dart, Android, iOS, Cross-Platform Solutions</p>
+                            <i class="fas fa-mobile-screen-button fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Cross-platform mobile</h3>
+                            <p class="card-text small">Flutter &amp; Dart, iOS/Android releases, performance-aware UI, and polish that survives real devices—not only demos.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 reveal reveal-up delay-2">
-                    <div class="card h-100">
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-2">
+                    <div class="card h-100 position-relative">
                         <div class="card-body text-center">
-                            <i class="fas fa-code fa-4x mb-3"></i>
-                            <h3 class="card-title">Programming</h3>
-                            <p class="card-text">Dart, Java, C++, Object-Oriented Programming</p>
+                            <i class="fas fa-diagram-project fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Architecture mindset</h3>
+                            <p class="card-text small">Feature boundaries, BLoC-style state, repositories, and structure that still makes sense when the product grows.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 reveal reveal-up delay-3">
-                    <div class="card h-100">
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-3">
+                    <div class="card h-100 position-relative">
                         <div class="card-body text-center">
-                            <i class="fas fa-database fa-4x mb-3"></i>
-                            <h3 class="card-title">Backend & Database</h3>
-                            <p class="card-text">Firebase, RESTful APIs, Cloud Firestore, SQLite</p>
+                            <i class="fas fa-cloud-arrow-up fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Cloud &amp; integrations</h3>
+                            <p class="card-text small">Firebase, REST APIs, auth and real-time patterns—comfortable collaborating from the client side with backend contracts.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 reveal reveal-up delay-1">
-                    <div class="card h-100">
+            </div>
+
+            <p class="skills-lane-title text-center text-uppercase small text-muted mb-3 mt-2 mt-lg-4 reveal reveal-up"><span class="skills-lane-title-inner">Differentiators · business, content &amp; execution</span></p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-1">
+                    <div class="card h-100 position-relative skills-card-accent">
                         <div class="card-body text-center">
-                            <i class="fas fa-paint-brush fa-4x mb-3"></i>
-                            <h3 class="card-title">UI/UX Design</h3>
-                            <p class="card-text">Material Design, Responsive UI, Custom Animations</p>
+                            <i class="fas fa-handshake fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Business understanding</h3>
+                            <p class="card-text small">Turning vague goals into milestones, trade-offs, and backlog clarity—freelance work taught me to care about outcomes and constraints, not only tickets.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 reveal reveal-up delay-2">
-                    <div class="card h-100">
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-2">
+                    <div class="card h-100 position-relative skills-card-accent">
                         <div class="card-body text-center">
-                            <i class="fas fa-tools fa-4x mb-3"></i>
-                            <h3 class="card-title">Tools</h3>
-                            <p class="card-text">Git, GitHub, VS Code, Android Studio, Figma</p>
+                            <i class="fas fa-video fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Content &amp; video</h3>
+                            <p class="card-text small">Short-form ideation, hooks and scripts, recording demos, and explaining technical work in a human voice—so products get seen, not only shipped.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 reveal reveal-up delay-3">
-                    <div class="card h-100">
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-3">
+                    <div class="card h-100 position-relative skills-card-accent">
                         <div class="card-body text-center">
-                            <i class="fas fa-brain fa-4x mb-3"></i>
-                            <h3 class="card-title">Other Skills</h3>
-                            <p class="card-text">Problem Solving, Business Understanding, Client Communication</p>
+                            <i class="fas fa-wand-magic-sparkles fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Ideation &amp; creativity</h3>
+                            <p class="card-text small">Brainstorming product angles, narrative UX, and “what if we tried this?” prototypes before committing engineering time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-1">
+                    <div class="card h-100 position-relative skills-card-accent">
+                        <div class="card-body text-center">
+                            <i class="fas fa-people-group fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Leadership &amp; ownership</h3>
+                            <p class="card-text small">Owning delivery end-to-end, clear async updates, aligning with designers and clients, and being the person who closes the loop.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-2">
+                    <div class="card h-100 position-relative skills-card-accent">
+                        <div class="card-body text-center">
+                            <i class="fas fa-list-check fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Time, tasks &amp; focus</h3>
+                            <p class="card-text small">Planning around deadlines, prioritizing when multiple streams compete, and systems that keep freelance work predictable—not heroic crunch.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 reveal reveal-up delay-3">
+                    <div class="card h-100 position-relative">
+                        <div class="card-body text-center">
+                            <i class="fas fa-palette fa-3x mb-3" aria-hidden="true"></i>
+                            <h3 class="card-title h5">Interface craft &amp; tools</h3>
+                            <p class="card-text small">Material / M3, responsive &amp; RTL layouts, motion with purpose; Git, VS Code, Android Studio, Figma—and knowing when design stops and shipped UI starts.</p>
                         </div>
                     </div>
                 </div>
@@ -216,220 +291,275 @@
                 <div class="col-lg-12 text-center mb-5 reveal reveal-up">
                     <h2 class="section-heading">My Projects</h2>
                     <hr class="divider" />
+                    <p class="lead project-section-subtitle mb-0">Tap any project card to open the full case study page.</p>
                 </div>
             </div>
+            <div class="tab-content" id="portfolioProjectTabContent">
+            <div class="tab-pane fade show active" id="featured-projects-pane" role="tabpanel" aria-labelledby="featured-work-tab" tabindex="0">
             <div class="row align-items-start">
-                <!-- Project Item 1 - National Veterinary Medicine Management System -->
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-left">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/Frame 1.jpg" alt="National Veterinary Medicine Management System">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-2">
-                                <h4 class="card-title mb-0 me-2">National Veterinary Medicine Management System</h4>
-                                <a href="https://web.facebook.com/profile.php?id=100063902626067" target="_blank" class="company-logo-link">
-                                    <img src="img/applogo.jpg" alt="ALWATANYA Logo" class="company-logo">
-                                </a>
-                            </div>
-                            <p class="card-text">
-                                <strong>For الوطنيه للادويه البيطريه (ALWATANYA Veterinary Medicine)</strong><br>
-                                As the sole developer, I conceptualized, designed, and deployed a full-stack e-commerce platform for a veterinary medicine company in Egypt. This project features two interconnected Flutter-based apps: one for end-users and delivery staff, and another for admin management. The system supports cross-platform deployment (mobile, web, desktop) and is optimized for Arabic RTL interfaces.
-                            </p>
-                            <p class="card-text">
-                                <strong>Key Features:</strong> Multi-role authentication, e-commerce core with product catalog, tiered pricing system, real-time order tracking, comprehensive admin dashboard, user/product/order management, and real-time data synchronization via Supabase.
-                            </p>
-                            <p class="card-text">
-                                <strong>Status:</strong> Completed two months ago, still actively maintained and enhanced. Web version available. Mobile apps will be available on App Store and Google Play soon. <em>Note: This application is restricted to authorized users only due to classified company data.</em>
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://web.facebook.com/profile.php?id=100063902626067" target="_blank" class="btn btn-sm btn-outline-info">Company Page</a>
-                                    <span class="btn btn-sm btn-outline-secondary disabled">Private Repository</span>
+                    <a href="projects/karakeep.html" class="project-link-wrap">
+                        <div class="card project-card karakeep-card project-identity-karakeep h-100">
+                            <img class="card-img-top" src="img/krakeep/karakeep_thumbnail.jpeg" alt="Karakeep Project Thumbnail">
+                            <div class="card-body">
+                                <h4 class="card-title project-title-with-logo"><img src="img/krakeep/karakeep_logo.png" class="project-inline-logo" alt="Karakeep Logo">Karakeep</h4>
+                                <p class="card-text">Service marketplace mobile platform with customer journeys, worker operations, and role-based architecture.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / BLoC / Dio</small>
                                 </div>
-                                <small class="text-muted">Flutter / Supabase / BLoC / Arabic RTL</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 2 - Real Estate Management Platform -->
-                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-left">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/brave_screenshot_www.figma.com.png" alt="Real Estate Management Platform">
-                        <div class="card-body">
-                            <h4 class="card-title">Real Estate Management Platform</h4>
-                            <p class="card-text">A comprehensive Flutter-based real estate management platform designed specifically for Saudi Arabian markets. Features advanced financial tracking, ZATCA-compliant invoicing, and complete property lifecycle management. Built as a freelance project on Mostaql platform.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="https://realstate-docs-iq2h.vercel.app/" target="_blank" class="btn btn-sm btn-outline-secondary">Documentation</a>
-                                    <a href="https://mostaql.com/u/dex27/reviews/8811250" target="_blank" class="btn btn-sm btn-outline-info">Mostaql Review</a>
-                                </div>
-                                <small class="text-muted">Flutter / Supabase / Arabic RTL</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project Item 3 - Herafyyin -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-up">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6298.JPG" alt="Herafyyin">
-                        <div class="card-body">
-                            <h4 class="card-title">Herafyyin</h4>
-                            <p class="card-text">A graduation project connecting skilled workers with customers in Saudi Arabia. Team-based development project for real clients, facilitating service bookings and worker-customer communication.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Documentation</a>
+                    <a href="projects/edu-nasser.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-edu-nasser h-100">
+                            <img class="card-img-top" src="img/edu nasser/edu nasser thumnnail.png" alt="Edu Nasser Project Thumbnail">
+                            <div class="card-body">
+                                <h4 class="card-title project-title-with-logo"><img src="img/edu nasser/main_logo.png" class="project-inline-logo" alt="Edu Nasser Logo">Edu Nasser</h4>
+                                <p class="card-text">Study abroad platform for program discovery, secure applications, and real-time admission tracking.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Payments / Uploads</small>
                                 </div>
-                                <small class="text-muted">Flutter / Team Project / Graduation</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 4 - WorkerHive -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-right">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6301.JPG" alt="WorkerHive">
-                        <div class="card-body">
-                            <h4 class="card-title">WorkerHive</h4>
-                            <p class="card-text">An advanced worker-customer connection platform with detailed features, push notifications, and Firebase backend. Enhanced version of Herafyyin with comprehensive functionality for service management.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="https://www.linkedin.com/posts/mohammed-waheed-a887972b1_from-ai-prototype-to-polished-platform-activity-7327903982213890049-QpH4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsLckgBH8WH5zfdTcYV5RKTVmkhDgtuqKA" target="_blank" class="btn btn-sm btn-outline-secondary">Documentation</a>
+                    <a href="projects/omica.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-omica h-100">
+                            <img class="card-img-top" src="img/omica/thumb nail omica.png" alt="Omica Project Thumbnail">
+                            <div class="card-body">
+                                <h4 class="card-title project-title-with-logo"><img src="img/omica/omica_thumbnail.png" class="project-inline-logo" alt="Omica Logo">Omica</h4>
+                                <p class="card-text">AI health and smartwatch app with wellness recommendations, rewards, and multilingual support.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / AI / Wearables</small>
                                 </div>
-                                <small class="text-muted">Flutter / Firebase / Push Notifications</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 5 - Ru'aya -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-left">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6295.JPG" alt="Ru'aya">
-                        <div class="card-body">
-                            <h4 class="card-title">Ru'aya</h4>
-                            <p class="card-text">A graduation project featuring two interconnected applications with real-time streaming capabilities. Innovative solution demonstrating advanced Flutter development and real-time communication features.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Documentation</a>
+                    <a href="projects/national-veterinary.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-national-veterinary h-100">
+                            <img class="card-img-top" src="img/vet/vet thumbnail.jpeg" alt="Alwatanyea Veterinary Medicine Project Thumbnail">
+                            <div class="card-body">
+                                <h4 class="card-title project-title-with-logo"><img src="img/vet/applogo.jpg" class="project-inline-logo" alt="Alwatanyea Veterinary Medicine Logo">National Veterinary System</h4>
+                                <p class="card-text">E-commerce and management platform with role-based workflows and business-ready inventory operations.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Supabase / ERP</small>
                                 </div>
-                                <small class="text-muted">Flutter / Real-time Streaming / Graduation</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 6 - Inventory Management App -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-up">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6299.JPG" alt="Inventory Management App">
-                        <div class="card-body">
-                            <h4 class="card-title">Inventory Management App</h4>
-                            <p class="card-text">A comprehensive inventory management solution for businesses to track products, manage stock levels, and generate reports.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="https://www.linkedin.com/posts/mohammed-waheed-a887972b1_innovation-tech-flutter-activity-7299593039725924352-gaMp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsLckgBH8WH5zfdTcYV5RKTVmkhDgtuqKA" target="_blank" class="btn btn-sm btn-outline-secondary">Documentation</a>
+                    <a href="projects/real-estate-erp.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-real-estate-erp h-100">
+                            <img class="card-img-top" src="img/real state/thumbnail real estate .jpeg" alt="Real Estate ERP System Thumbnail">
+                            <div class="card-body">
+                                <h4 class="card-title project-title-with-logo"><img src="img/real state/real state logo.png" class="project-inline-logo" alt="Real Estate ERP Logo">Real Estate ERP System</h4>
+                                <p class="card-text">Windows-focused property and finance platform with reporting, contracts, and real-time accounting updates.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Windows / Supabase</small>
                                 </div>
-                                <small class="text-muted">Flutter / Firebase / Cloud Functions</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 7 - Crypto App -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-right">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6303.JPG" alt="Crypto App">
-                        <div class="card-body">
-                            <h4 class="card-title">Crypto App</h4>
-                            <p class="card-text">A cryptocurrency application that provides real-time market data, price tracking, and portfolio management.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="https://www.linkedin.com/posts/mohammed-waheed-a887972b1_a-sneak-peek-into-the-crypto-app-ui-activity-7285895008816132097-WShB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsLckgBH8WH5zfdTcYV5RKTVmkhDgtuqKA" target="_blank" class="btn btn-sm btn-outline-secondary">Documentation</a>
+                    <a href="projects/herafyyin.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-herafyyin h-100">
+                            <img class="card-img-top" src="img/herafyyin/final logo.png" alt="Herafyyin Project Thumbnail">
+                            <div class="card-body">
+                                <h4 class="card-title project-title-with-logo"><img src="img/herafyyin/logo.png" class="project-inline-logo" alt="Herafyyin Logo">Herafyyin</h4>
+                                <p class="card-text">Graduation project connecting skilled workers with customers for service booking and communication.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Team Project</small>
                                 </div>
-                                <small class="text-muted">Flutter / APIs</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 8 - Road Service App -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-left">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6302.JPG" alt="Road Service App">
-                        <div class="card-body">
-                            <h4 class="card-title">Road Service App</h4>
-                            <p class="card-text">An on-demand roadside assistance application connecting drivers with nearby service providers for emergency help.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Private</a>
+                    <a href="projects/workerhive.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-workerhive h-100">
+                            <img class="card-img-top" src="img/worker hive/logo.png" alt="WorkerHive Project Thumbnail">
+                            <div class="card-body">
+                                <h4 class="card-title project-title-with-logo"><img src="img/worker hive/logo.png" class="project-inline-logo" alt="WorkerHive Logo">WorkerHive</h4>
+                                <p class="card-text">Enhanced worker-customer platform with push notifications and full service management workflows.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Firebase</small>
                                 </div>
-                                <small class="text-muted">Flutter / Google Maps API / Firebase</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 9 - Zahimar Face Recognition App -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-up">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6300.JPG" alt="Zahimar Face Recognition App">
-                        <div class="card-body">
-                            <h4 class="card-title">Zahimar App</h4>
-                            <p class="card-text">An innovative application designed for people who have difficulty remembering faces, using AI face recognition to provide identity reminders.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Private</a>
+                    <a href="projects/ruaya.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-ruaya h-100">
+                            <img class="card-img-top" src="img/IMG_6295.JPG" alt="Ru'aya">
+                            <div class="card-body">
+                                <h4 class="card-title">Ru'aya</h4>
+                                <p class="card-text">Graduation project for multi-camera monitoring with real-time people counting, built with web, backend, and dual mobile apps.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Real-time / Computer Vision</small>
                                 </div>
-                                <small class="text-muted">Flutter / TensorFlow / ML Kit</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 10 - ToDo App -->
+
                 <div class="col-lg-4 col-md-6 mb-4 reveal reveal-right">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6375.JPG" alt="ToDo App">
-                        <div class="card-body">
-                            <h4 class="card-title">ToDo App</h4>
-                            <p class="card-text">A simple todo application built with Flutter that allows users to manage their daily tasks efficiently.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="https://www.linkedin.com/posts/mohammed-waheed-a887972b1_flutterdev-sideprojects-keepbuilding-activity-7320058116174163970-kSQd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsLckgBH8WH5zfdTcYV5RKTVmkhDgtuqKA" target="_blank" class="btn btn-sm btn-outline-secondary">Documentation</a>
+                    <a href="projects/inventory-management.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-inventory-management h-100">
+                            <img class="card-img-top abo-hassan-card-logo" src="img/abo%20hassan/7.png" alt="Abo Hassan — أبو حسن company logo">
+                            <div class="card-body">
+                                <h4 class="card-title">Abo Hassan</h4>
+                                <p class="card-text">Dual-role Flutter + Supabase ops for Abo Hassan (meat wholesale): live inventory, draft-to-confirm sales, Edge-backed admin grids, per-rep analytics, RTL Arabic UI—full case study and LinkedIn video walkthrough on the project page.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Supabase</small>
                                 </div>
-                                <small class="text-muted">Flutter / Dart</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Project Item 11 - Habit Tracker -->
-                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-left">
-                    <div class="card project-card">
-                        <img class="card-img-top" src="img/IMG_6295.JPG" alt="Habit Tracker">
-                        <div class="card-body">
-                            <h4 class="card-title">Habit Tracker</h4>
-                            <p class="card-text">A simple app to track your daily habits and help users build positive routines through consistent tracking.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://github.com/Mohammed-Waheed27" target="_blank" class="btn btn-sm btn-outline-primary">Code</a>
-                                    <a href="https://www.linkedin.com/posts/mohammed-waheed-a887972b1_flutterdev-sideprojects-keepbuilding-activity-7320058116174163970-kSQd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsLckgBH8WH5zfdTcYV5RKTVmkhDgtuqKA" target="_blank" class="btn btn-sm btn-outline-secondary">Documentation</a>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-right">
+                    <a href="projects/swims.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-swims h-100">
+                            <div class="project-card-thumb-swms">
+                                <img class="card-img-top" src="img/swms/app%20main%20logo.png" alt="Smart Waste Management System (SWMS) logo">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Smart Waste Management System</h4>
+                                <p class="text-muted small mb-1">SWMS · portfolio case study</p>
+                                <p class="card-text">Flutter smart waste operations: maps, citizen reports, worker jobs, supervisor coordination, admin KPIs—RTL-first, OSRM routing, clean architecture.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Maps / OSRM / BLoC</small>
                                 </div>
-                                <small class="text-muted">Flutter / Firebase</small>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+            </div>
+            </div>
+
+            <div class="tab-pane fade" id="early-work" role="tabpanel" aria-labelledby="early-work-tab" tabindex="0">
+                <p class="text-center text-muted mb-4 px-2 early-work-intro">Older experiments and practice apps—each has a <strong class="text-white-50">short “progress snapshot”</strong> (Spark → Lesson → Trajectory) so you can see <em>how I started</em>, <em>what stuck</em>, and <em>what I build toward now</em>. Featured work is the headline; this tab is an honest growth chart for teams who care about trajectory, not only the latest repo.</p>
+                <div class="row align-items-start">
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-up">
+                    <a href="projects/road-service.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-road-service h-100 project-card-early-work">
+                            <img class="card-img-top" src="img/IMG_6302.JPG" alt="Road Service App">
+                            <div class="card-body">
+                                <h4 class="card-title">Road Service App</h4>
+                                <p class="card-text"><span class="badge bg-secondary bg-opacity-50 me-1">Early work</span>On-demand roadside assistance app connecting drivers with nearby service providers.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Maps / Firebase</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-right">
+                    <a href="projects/zahimar.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-zahimar h-100 project-card-early-work">
+                            <img class="card-img-top" src="img/IMG_6300.JPG" alt="Zahimar App">
+                            <div class="card-body">
+                                <h4 class="card-title">Zahimar App</h4>
+                                <p class="card-text"><span class="badge bg-secondary bg-opacity-50 me-1">Early work</span>Face-recognition based assistant concept to help users remember identities more confidently.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / TensorFlow / ML Kit</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-left">
+                    <a href="projects/todo-app.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-todo-app h-100 project-card-early-work">
+                            <img class="card-img-top" src="img/IMG_6375.JPG" alt="ToDo App">
+                            <div class="card-body">
+                                <h4 class="card-title">ToDo App</h4>
+                                <p class="card-text"><span class="badge bg-secondary bg-opacity-50 me-1">Early work</span>Simple Flutter productivity app to manage daily tasks with clean and straightforward UX.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Dart</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-up">
+                    <a href="projects/habit-tracker.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-habit-tracker h-100 project-card-early-work">
+                            <img class="card-img-top" src="img/IMG_6295.JPG" alt="Habit Tracker">
+                            <div class="card-body">
+                                <h4 class="card-title">Habit Tracker</h4>
+                                <p class="card-text"><span class="badge bg-secondary bg-opacity-50 me-1">Early work</span>Daily habit tracking app focused on helping users build and maintain routines.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / Firebase</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal reveal-left">
+                    <a href="projects/crypto-app.html" class="project-link-wrap">
+                        <div class="card project-card project-identity-crypto-app h-100 project-card-early-work">
+                            <img class="card-img-top" src="img/IMG_6303.JPG" alt="Crypto App">
+                            <div class="card-body">
+                                <h4 class="card-title">Crypto App</h4>
+                                <p class="card-text"><span class="badge bg-secondary bg-opacity-50 me-1">Early work</span>Early freelance Flutter UI: sleek crypto app design with intuitive navigation — one of my first beginnings; two LinkedIn demo posts on the project page.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="btn btn-sm btn-outline-primary">View Details</span>
+                                    <small class="text-muted">Flutter / UI</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="row justify-content-center mt-4 pt-2">
+                <div class="col-lg-10 col-xl-8 text-center portfolio-project-tab-rail reveal reveal-up">
+                    <p class="portfolio-tab-rail-label mb-3"><span class="portfolio-tab-rail-label-inner">Timeline</span></p>
+                    <ul class="nav nav-pills portfolio-project-tabs" id="portfolioProjectTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="featured-work-tab" data-bs-toggle="tab" data-bs-target="#featured-projects-pane" data-tab-persona="featured" type="button" role="tab" aria-controls="featured-projects-pane" aria-selected="true"><span class="portfolio-tab-icon" aria-hidden="true">◆</span>Featured work</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="early-work-tab" data-bs-toggle="tab" data-bs-target="#early-work" data-tab-persona="archive" type="button" role="tab" aria-controls="early-work" aria-selected="false"><span class="portfolio-tab-icon" aria-hidden="true">◇</span>Early work</button>
+                        </li>
+                    </ul>
+                    <p class="portfolio-tab-rail-footnote small mt-3 mb-0">Switch views — featured is current focus; early holds older experiments.</p>
                 </div>
             </div>
         </div>
@@ -458,7 +588,7 @@
                                 <p><a href="https://wa.me/01270640035" target="_blank">+201270640035</a></p>
                             </div>
                         </div>
-                        
+
                         <!-- LinkedIn Contact -->
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -469,7 +599,7 @@
                                 <p><a href="https://www.linkedin.com/in/mohammed-waheed-a887972b1/" target="_blank">Mohammed Waheed</a></p>
                             </div>
                         </div>
-                        
+
                         <!-- GitHub Contact -->
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -480,7 +610,7 @@
                                 <p><a href="https://github.com/Mohammed-Waheed27" target="_blank">Mohammed-Waheed27</a></p>
                             </div>
                         </div>
-                        
+
                         <!-- Email Contact -->
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -491,7 +621,7 @@
                                 <p><a href="mailto:mohammedwaheed@gmail.com">mohammedwaheed@gmail.com</a></p>
                             </div>
                         </div>
-                        
+
                         <!-- Location -->
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -513,7 +643,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p class="mb-0">&copy; 2025 Mohammed Waheed. All Rights Reserved.</p>
+                    <p class="mb-0">&copy; 2026 Mohammed Waheed. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

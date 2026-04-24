@@ -1,7 +1,7 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scrolling to all links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Add smooth scrolling to in-page anchor links (exclude special handlers)
+    document.querySelectorAll('a[href^="#"]:not([data-open-project-tab])').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             
@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: target.offsetTop - 56, // Adjust for navbar height
                     behavior: 'smooth'
                 });
+            }
+        });
+    });
+
+    // Navbar "Early work" → scroll to Projects and open the Early work tab
+    document.querySelectorAll('a[data-open-project-tab="early"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const projects = document.getElementById('projects');
+            if (projects) {
+                window.scrollTo({
+                    top: projects.offsetTop - 56,
+                    behavior: 'smooth'
+                });
+            }
+            const tabTrigger = document.getElementById('early-work-tab');
+            if (tabTrigger && typeof bootstrap !== 'undefined' && bootstrap.Tab) {
+                bootstrap.Tab.getOrCreateInstance(tabTrigger).show();
             }
         });
     });
@@ -98,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typed.js effect for hero section - if Typed.js is included
     if (typeof Typed !== 'undefined') {
         new Typed('#typed-text', {
-            strings: ['Flutter Developer', 'Mobile App Developer', 'Creative Problem Solver'],
+            strings: ['Flutter Developer', 'Mobile Product Builder', 'Content & Video Creator', 'Creative Problem Solver'],
             typeSpeed: 60,
             backSpeed: 30,
             loop: true,
@@ -260,4 +278,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', animateSectionHeadings);
     window.addEventListener('load', animateSectionHeadings);
+
+    function openEarlyWorkTabAndScrollToProjects() {
+        const tabTrigger = document.getElementById('early-work-tab');
+        if (tabTrigger && typeof bootstrap !== 'undefined' && bootstrap.Tab) {
+            bootstrap.Tab.getOrCreateInstance(tabTrigger).show();
+        }
+        const projects = document.getElementById('projects');
+        if (projects) {
+            window.scrollTo({
+                top: projects.offsetTop - 56,
+                behavior: 'auto'
+            });
+        }
+    }
+
+    if (window.location.hash === '#early-work') {
+        setTimeout(openEarlyWorkTabAndScrollToProjects, 0);
+    }
+
+    window.addEventListener('hashchange', function () {
+        if (window.location.hash === '#early-work') {
+            openEarlyWorkTabAndScrollToProjects();
+        }
+    });
 }); 

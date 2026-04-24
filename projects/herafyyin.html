@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herafyyin | Mohammed Waheed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="project-theme-herafyyin">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Mohammed Waheed</a>
+            <a href="../index.html#projects" class="btn btn-sm btn-outline-light">Back to Projects</a>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold project-hero-title-with-logo"><img src="../img/herafyyin/logo.png" class="project-hero-inline-logo" alt="Herafyyin Logo">Herafiien Marketplace</h1>
+                    <p class="lead mb-2">Role-based service marketplace connecting customers with skilled workers</p>
+                    <p class="mb-0">
+                        Full-stack product built around a complete request lifecycle: discover, book, execute, track, and chat.
+                        The platform includes a Worker App, Customer App, and Admin/Backend control layer.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="../img/herafyyin/final logo.png" class="project-hero-image" alt="Herafyyin Project Thumbnail">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="project-details-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="project-details-card mb-4">
+                        <h3>Project Idea & Vision</h3>
+                        <p>
+                            The core idea was to digitize how local service jobs are requested and delivered.
+                            In many markets, customers struggle to find trusted workers quickly, while workers
+                            struggle to manage incoming jobs in an organized way.
+                        </p>
+                        <p>
+                            This platform solves both problems by creating one operational ecosystem where each role
+                            has clear ownership of operations and data flow.
+                        </p>
+                        <ul class="project-impact-list">
+                            <li>Customers discover workers, submit requests, and track progress.</li>
+                            <li>Workers receive, accept/reject, and complete jobs through a structured workflow.</li>
+                            <li>Admins manage platform integrity, worker activation, and governance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Product Experience (UI/UX)</h3>
+                        <ul class="project-impact-list">
+                            <li>Role-based onboarding for customer and worker journeys.</li>
+                            <li>Simple navigation with focused task flows and bottom navigation patterns.</li>
+                            <li>Status-driven interfaces: pending, accepted, rejected, and completed.</li>
+                            <li>Feedback-rich interactions with loading, empty, success, and error states.</li>
+                            <li>Mobile-first readability with responsive spacing and consistent typography.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Worker App Responsibilities</h3>
+                        <ul class="project-impact-list">
+                            <li>Receive and review service requests.</li>
+                            <li>Accept or reject incoming jobs.</li>
+                            <li>Mark jobs as completed.</li>
+                            <li>Track active jobs and history records.</li>
+                            <li>Chat directly with customers.</li>
+                            <li>Manage profile and service identity.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Admin/Backend Responsibilities</h3>
+                        <ul class="project-impact-list">
+                            <li>Worker account lifecycle control, including activation logic.</li>
+                            <li>Authentication and role validation.</li>
+                            <li>Platform-level governance for requests, profiles, and chat domains.</li>
+                            <li>API contract management across Auth, Profile, Work, and Chat services.</li>
+                            <li>Centralized rule enforcement for quality and operational reliability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Technical Implementation & Architecture</h3>
+                        <ul class="project-impact-list">
+                            <li>Frontend: Flutter with Material-based cross-platform UI.</li>
+                            <li>Architecture: feature-based structure with clean layered boundaries.</li>
+                            <li>State Management: BLoC for predictable asynchronous transitions.</li>
+                            <li>Dependency Injection: centralized service registration.</li>
+                            <li>Networking: token-based API integration with structured endpoint constants.</li>
+                            <li>Persistence: local token/session storage for continuity.</li>
+                            <li>Error Handling: consistent failure mapping and user-facing feedback.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card">
+                        <h3>Key Challenges & Solutions</h3>
+                        <ul class="project-impact-list">
+                            <li><strong>Multi-role complexity:</strong> solved with explicit role modeling and role-based flows.</li>
+                            <li><strong>Asynchronous UX behavior:</strong> solved using clear BLoC states and feedback patterns.</li>
+                            <li><strong>Backend variability during development:</strong> solved with fallback/local simulation while preserving API contracts.</li>
+                            <li><strong>Request lifecycle correctness:</strong> solved with strict action paths and status-aware UI logic.</li>
+                            <li><strong>Scalability:</strong> solved through clean architecture boundaries and DI-driven composition.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="project-details-card">
+                        <h3>My Contribution</h3>
+                        <ul class="project-meta-list">
+                            <li>Designed and delivered multi-role marketplace architecture.</li>
+                            <li>Implemented end-to-end request lifecycle workflows.</li>
+                            <li>Built state-driven UI for auth, booking, requests, history, and chat.</li>
+                            <li>Integrated REST API layers with tokenized auth and reusable contracts.</li>
+                            <li>Structured codebase with feature modules, DI, and BLoC.</li>
+                            <li>Focused on UX quality through validation and clear state communication.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mt-4">
+                        <h3>Final Product Outcome</h3>
+                        <p>
+                            The final product transforms fragmented manual coordination into a reliable digital service workflow.
+                            Customers can request and track jobs confidently, workers can manage operations efficiently,
+                            and admins can maintain quality through backend governance.
+                        </p>
+                        <p class="mb-0">
+                            From both business and engineering perspectives, it provides a scalable foundation for real-world
+                            service operations.
+                        </p>
+                    </div>
+
+                    <div class="project-details-card mt-4">
+                        <h3>Short Version (CV / Upwork)</h3>
+                        <p class="mb-0">
+                            Built a full-stack, role-based service marketplace platform using Flutter and structured backend APIs.
+                            Delivered separate customer and worker experiences with a complete request lifecycle (create, accept/reject,
+                            complete), chat, profile management, and session persistence, while enabling admin/backend control over worker
+                            activation and platform operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abo Hassan — dual-role Flutter and Supabase inventory app for meat wholesale: live stock, draft orders, admin analytics, Arabic RTL. Case study and LinkedIn video walkthrough.">
+    <title>Abo Hassan | Mohammed Waheed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="project-theme-inventory-management">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Mohammed Waheed</a>
+            <a href="../index.html#projects" class="btn btn-sm btn-outline-light">Back to Projects</a>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-5 fw-bold project-hero-title-with-logo">
+                        <span class="abo-hassan-title-mark" aria-hidden="true" title="Inventory stack mark">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56" class="abo-hassan-title-mark-svg" focusable="false">
+                                <defs>
+                                    <linearGradient id="aboInvA" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#41e4b3"/>
+                                        <stop offset="1" stop-color="#a6ef53"/>
+                                    </linearGradient>
+                                    <linearGradient id="aboInvB" x1="56" y1="0" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#1d3f62"/>
+                                        <stop offset="1" stop-color="#41e4b3"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="4" y="36" width="48" height="14" rx="3" fill="url(#aboInvB)" opacity="0.92"/>
+                                <rect x="10" y="22" width="36" height="12" rx="2" fill="url(#aboInvA)" opacity="0.88"/>
+                                <rect x="16" y="8" width="24" height="12" rx="2" fill="#a6ef53" opacity="0.95"/>
+                                <path d="M28 4v6M22 7h12" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        Abo Hassan
+                    </h1>
+                    <p class="lead mb-2">Bilingual enterprise inventory suite—field reps and admins on one Supabase backend</p>
+                    <p class="mb-3">In product terms: a Flutter client where <strong>workers (مندوب)</strong> browse <strong>live stock</strong>, build a <strong>local draft order</strong>, and <strong>confirm</strong> so the backend <strong>decrements inventory</strong> and records <strong>orders + line items</strong>. <strong>Admins</strong> run the <strong>catalog</strong>, see <strong>reservations and orders</strong> (including via an <strong>Edge Function</strong> + <strong>Dio</strong>), <strong>per-rep analytics</strong>, <strong>batch confirmations</strong>, and <strong>shared messaging</strong>. Auth is role-aware; a splash session check routes into <strong>separate navigation shells</strong> per role.</p>
+                    <p class="mb-2"><strong>My role:</strong> End-to-end Flutter development, Supabase (schema, realtime, auth), Edge Function integration for aggregated admin reads, and Arabic-first UI.</p>
+                    <p class="small text-white-50 mb-3">Foundational client project for a meat wholesale company—one of the first production-style systems on my path—built to replace a fragmented internal reservation process with a single, auditable workflow.</p>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                        <a href="https://www.linkedin.com/posts/mohammed-waheed-a887972b1_innovation-tech-flutter-activity-7299593039725924352-gaMp" class="btn btn-lg abo-hassan-linkedin-btn text-white" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin me-2"></i>Watch the walkthrough</a>
+                        <span class="small text-white-50">Full product tour with voice on LinkedIn</span>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center text-lg-end">
+                    <figure class="abo-hassan-brand-stage mx-auto mx-lg-0 ms-lg-auto mb-0">
+                        <div class="abo-hassan-brand-backdrop" aria-hidden="true">
+                            <div class="abo-hassan-brand-grid"></div>
+                            <div class="abo-hassan-brand-pallets" aria-hidden="true">
+                                <span class="abo-hassan-pallet"></span>
+                                <span class="abo-hassan-pallet"></span>
+                                <span class="abo-hassan-pallet"></span>
+                            </div>
+                            <div class="abo-hassan-brand-scanline" aria-hidden="true"></div>
+                        </div>
+                        <div class="abo-hassan-brand-orbit">
+                            <span class="abo-hassan-brand-orbit-ring" aria-hidden="true"></span>
+                            <img src="../img/abo%20hassan/7.png" alt="Abo Hassan — أبو حسن, halal meat wholesale brand mark" class="abo-hassan-brand-logo-img" width="168" height="168" loading="lazy">
+                        </div>
+                        <ul class="abo-hassan-brand-chips list-unstyled d-flex flex-wrap justify-content-center justify-content-lg-end gap-2 mt-3 mb-0 small" aria-label="System highlights">
+                            <li><span class="badge rounded-pill abo-hassan-hero-chip"><i class="fas fa-bolt me-1" aria-hidden="true"></i>Realtime</span></li>
+                            <li><span class="badge rounded-pill abo-hassan-hero-chip"><i class="fas fa-boxes-stacked me-1" aria-hidden="true"></i>SKU truth</span></li>
+                            <li><span class="badge rounded-pill abo-hassan-hero-chip"><i class="fas fa-user-shield me-1" aria-hidden="true"></i>Dual role</span></li>
+                        </ul>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="project-details-section py-5">
+        <div class="container">
+            <a href="https://www.linkedin.com/posts/mohammed-waheed-a887972b1_innovation-tech-flutter-activity-7299593039725924352-gaMp" class="abo-hassan-demo-cta-link text-decoration-none text-reset d-block mb-4" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn post: video walkthrough of Abo Hassan app">
+                <div class="abo-hassan-demo-cta">
+                    <div class="abo-hassan-demo-cta-glow" aria-hidden="true"></div>
+                    <div class="row g-4 align-items-center position-relative">
+                        <div class="col-md-auto text-center">
+                            <div class="abo-hassan-demo-cta-ring" aria-hidden="true">
+                                <span class="abo-hassan-demo-cta-play"><i class="fas fa-play"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <p class="text-uppercase small fw-semibold abo-hassan-demo-cta-eyebrow mb-1">Live demo instead of a gallery</p>
+                            <h3 class="h4 fw-bold text-white mb-2">Press play on LinkedIn—see admin vs مندوب flows, realtime stock, and the full story</h3>
+                            <p class="text-white-50 small mb-0">One recorded walkthrough covers the problem, the UI, BLoC + Supabase architecture, and how the app replaced manual inventory chaos. Opens in a new tab.</p>
+                        </div>
+                        <div class="col-md-auto text-center text-md-end">
+                            <span class="btn abo-hassan-linkedin-btn text-white btn-lg px-4"><i class="fab fa-linkedin me-2"></i>Open post &amp; video</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="project-details-card mb-4">
+                        <h3>Problem and ideation</h3>
+                        <p class="mb-3">Operations teams juggle <strong>stock truth</strong>, <strong>who sold what</strong>, and <strong>management visibility</strong> across phones and desks. The company’s internal reservation workflow was informal—easy to misread, hard to reconcile, and weak for auditability.</p>
+                        <p class="mb-0">The product idea is to <strong>separate duties</strong>: people in the field should not need full database access, while leadership needs <strong>aggregation, auditability, and broadcast</strong> tools. One shared backend (<code>inventory</code>, <code>orders</code>, <code>order_items</code>, <code>clients</code>, messaging) powers two deliberate experiences—not two unrelated apps.</p>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Product story</h3>
+                        <p class="mb-4">A single codebase encodes <strong>fast, guided flows for workers</strong> and <strong>control plus insight for admins</strong>, with a deliberately simple surface over strict data rules: one app entry, role-based routing, live inventory, and a confirm step that ties quantity changes to persisted orders.</p>
+                        <div class="project-highlight-grid">
+                            <div class="project-highlight-item">
+                                <i class="fas fa-triangle-exclamation"></i>
+                                <h5>Problem</h5>
+                                <p>Fragmented reservations, oversell risk, and no single place to see every rep’s activity.</p>
+                            </div>
+                            <div class="project-highlight-item">
+                                <i class="fas fa-bullseye"></i>
+                                <h5>Vision</h5>
+                                <p>One operational system: realtime catalog truth, draft-to-confirm sales, and admin oversight including analytics and messaging.</p>
+                            </div>
+                            <div class="project-highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <h5>Outcome</h5>
+                                <p>Replaced manual coordination with a deployed internal app—streamlined ordering without constant accountant mediation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Two roles, one product</h3>
+                        <p class="mb-3">The “final product” is not a generic inventory screen—it is a <strong>role matrix</strong> mapped to navigation and data emphasis.</p>
+                        <div class="table-responsive abo-hassan-role-table-wrap">
+                            <table class="table table-dark table-borderless abo-hassan-role-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Dimension</th>
+                                        <th scope="col">Worker (<span lang="ar">مندوب</span>, <code>user</code>)</th>
+                                        <th scope="col">Admin (<code>admin</code>)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Primary job</th>
+                                        <td>Take orders against <strong>live inventory</strong>; <strong>draft cart</strong> locally; <strong>submit</strong> so stock and orders stay consistent.</td>
+                                        <td><strong>CRUD catalog</strong>; see everyone’s <strong>reservations and orders</strong>; <strong>analytics</strong>; <strong>confirm</strong> rep summaries; <strong>messaging</strong>.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Home hub</th>
+                                        <td>Shortcuts: stock, reservation history, messages.</td>
+                                        <td>Shortcuts: stock, reservations/orders, broadcast message, reps’ order board.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Navigation</th>
+                                        <td>Bottom <strong>GNav</strong> + <code>PageView</code>: reservations, cart/orders, home, inventory, messages.</td>
+                                        <td>Same pattern: <strong>analysis</strong>, reservations, home, inventory, messages.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Data emphasis</th>
+                                        <td><strong>Realtime</strong> inventory stream; <strong>SharedPreferences</strong> for pending lines until confirm.</td>
+                                        <td>Streams for inventory; <strong>HTTP</strong> to Edge for enriched order lists; order summary APIs.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Features (implementation-backed)</h3>
+                        <p class="mb-3"><strong>Authentication and onboarding</strong> — Supabase initialized from <code>.env</code> (URL + anon key). Splash checks session and routes to auth or the correct shell. Login uses tabs for admin vs مندوب with RTL layout.</p>
+                        <p class="mb-3"><strong>Worker</strong> — Live inventory via <code>inventory</code> stream and fetches. Draft pipeline: add lines → SharedPreferences → confirm runs read qty → validate → update rows → insert <code>orders</code> and <code>order_items</code> (Arabic errors for missing SKU or oversell). Orders screen with grid-style sections, snackbars, inventory refresh on success. User reservations/history tied to <code>user_id</code>. Messages page reused for company-wide comms.</p>
+                        <p class="mb-3"><strong>Admin</strong> — Inventory add/update/delete with realtime stream (DB triggers in the pipeline). Reservations and orders via Dio to an Edge Function URL from env, with defensive parsing of nested <code>items</code>. Analysis: orders summary per user, cards per rep, drill-down, confirm user orders with feedback. Messaging via MessageBloc and entities. Logout returns to auth.</p>
+                        <p class="mb-0"><strong>Cross-cutting</strong> — Clean architecture per feature, repository implementations, use cases, <code>Either</code> + <code>Failure</code> from <code>dartz</code>. Root <code>MultiBlocProvider</code> for Auth, Admin (inventory, analysis, messages, reservations, orders summary), and User (inventory, orders, reservations).</p>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>UI and UX</h3>
+                        <p class="mb-3"><strong>Visual system:</strong> Centralized palette—deep bluish nav, teal/green accents, warm off-whites, red for errors—cohesive across admin and worker shells.</p>
+                        <p class="mb-3"><strong>Typography:</strong> Google Fonts <strong>Almarai</strong> through a custom <code>TextTheme</code> for readable Arabic at scale.</p>
+                        <p class="mb-3"><strong>Responsiveness:</strong> <code>flutter_screenutil</code> with a 390×844 design baseline, <code>SafeArea</code>, padding via <code>.w</code> / <code>.h</code>.</p>
+                        <p class="mb-3"><strong>Motion:</strong> <code>flutter_animate</code> on splash (e.g. pulsing logo) for a polished first load.</p>
+                        <p class="mb-3"><strong>Navigation:</strong> <code>google_nav_bar</code> plus a non-swipeable <code>PageView</code> for predictable tabs; home cards jump to the correct tab via ancestor state (<code>WrapperNavigationState</code> / <code>UserWrapperNavigationState</code>)—hub-and-spoke for non-technical users.</p>
+                        <p class="mb-0"><strong>Density:</strong> Syncfusion Flutter DataGrid for inventory and orders where tabular accuracy matters; snackbars and BlocListener patterns keep async errors visible.</p>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Technical architecture</h3>
+                        <p class="mb-3"><strong>Stack:</strong> Flutter (Dart 3.6+), Supabase Flutter, flutter_bloc, dio, shared_preferences, flutter_dotenv, equatable, syncfusion_flutter_datagrid, intl, google_nav_bar, flutter_screenutil, google_fonts, flutter_animate. <code>fl_chart</code> is in pubspec as a declared dependency for future analytics visuals—not yet referenced in <code>lib/</code> at documentation time.</p>
+                        <p class="mb-3"><strong>Role model:</strong> Session carries <code>admin</code> vs <code>user</code>. Splash resolves auth and routes into two different <code>PageView</code> + Google Nav Bar shells so permission boundaries stay obvious in the UI, not only in queries.</p>
+                        <p class="mb-3"><strong>Worker path:</strong> Subscribes to <code>inventory</code> realtime streams; builds a local draft order; on confirm, the flow reads current quantity, validates against requested amount, rejects oversell with Arabic messaging, then updates rows and inserts <code>orders</code> + <code>order_items</code> in a coordinated sequence—integrity enforced at the application layer with room to harden further via DB transactions and constraints.</p>
+                        <p class="mb-3"><strong>Admin path:</strong> CRUD on catalog with realtime refresh; reservations and order lists enriched via a Supabase Edge Function consumed through Dio (defensive JSON parsing for nested items, fallbacks like unknown user labels); separate BLoCs for inventory, reservations, order summaries, analysis drill-down, and messaging.</p>
+                        <p class="mb-0"><strong>Configuration and targets:</strong> Secrets and function URLs in <code>.env</code>, not hardcoded. Mobile-first UI; Flutter <code>web/</code> assets support a multi-platform story where relevant.</p>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Challenges and how they were addressed</h3>
+                        <ol class="mb-0 ps-3">
+                            <li class="mb-3"><strong>Stock integrity on confirm</strong> — Load current quantity, compute <code>newQty</code>, reject if negative, then update—documented as guarding oversell at the app layer; DB constraints and transactions are the natural next hardening step.</li>
+                            <li class="mb-3"><strong>Split responsibilities without duplicate backends</strong> — Same inventory stream concept for both roles; admin writes, worker consumes through confirm-only writes for stock-changing paths.</li>
+                            <li class="mb-3"><strong>Aggregated order views</strong> — Edge Function + Dio returns a clean list shape with validation and fallbacks (e.g. “Unknown User”, default quantities) instead of fragile client-only joins.</li>
+                            <li class="mb-3"><strong>Draft experience</strong> — SharedPreferences stages lines before commit—bridges spotty connectivity and UX continuity until sync.</li>
+                            <li class="mb-3"><strong>Role-based routing</strong> — Single entry through splash branches on role into two different <code>PageView</code> apps—reduces wrong-permission UI and keeps user mental models simple.</li>
+                            <li class="mb-0"><strong>Arabic product UX</strong> — RTL <code>Directionality</code>, Almarai, and Arabic copy in analysis empty states and errors—built for local-market operations.</li>
+                        </ol>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>What shipped (high level)</h3>
+                        <ul class="mb-0">
+                            <li class="mb-2">Dual-role Flutter application (admin vs field worker) on Supabase</li>
+                            <li class="mb-2">Clean architecture layers, BLoC, repository pattern, and <code>Either</code>-based failures</li>
+                            <li class="mb-2">Realtime inventory subscriptions and full admin catalog CRUD</li>
+                            <li class="mb-2">Order confirmation that updates inventory and creates <code>orders</code> + <code>order_items</code> with quantity validation</li>
+                            <li class="mb-2">Edge Function integration via Dio for server-side order aggregation in admin grids</li>
+                            <li class="mb-2">Per-user order analytics and admin confirmation flows</li>
+                            <li class="mb-0">RTL Arabic UI, responsive layout, themed typography, and GNav + hub navigation</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Engineering tradeoffs and honesty</h3>
+                        <ul class="mb-0">
+                            <li class="mb-2"><strong>Charts:</strong> Describe <code>fl_chart</code> only when charts are wired; today it is a declared dependency, not used in <code>lib/</code>—analytics remain card- and grid-driven until then.</li>
+                            <li class="mb-2"><strong>Draft cart MVP:</strong> Some <code>UserLocalDataSource</code> paths may still carry TODOs or stubs (e.g. line edit/remove)—fair to call “planned iteration” in conversation.</li>
+                            <li class="mb-0"><strong>Edge vs client joins:</strong> Heavy read shapes for admin grids stay on the Edge Function so the mobile client stays thin and parsing stays resilient.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="project-details-card mb-4">
+                        <h3>At a glance</h3>
+                        <ul class="small mb-0 ps-3">
+                            <li class="mb-2">Meat wholesale / halal operations context</li>
+                            <li class="mb-2">Supabase Auth + Postgres + Realtime + Edge Functions</li>
+                            <li class="mb-2">Worker draft cart → atomic-style confirm pipeline</li>
+                            <li class="mb-0">Video walkthrough on LinkedIn (see banner above)</li>
+                        </ul>
+                    </div>
+                    <div class="project-details-card mb-4">
+                        <h3>Tags</h3>
+                        <p class="small mb-0">Flutter · Dart · Supabase · PostgreSQL · Edge Functions · BLoC · Clean Architecture · Dio · REST · Realtime · Syncfusion DataGrid · RTL / i18n · Material Design · Git</p>
+                    </div>
+                    <div class="project-details-card">
+                        <h3>What this demonstrates</h3>
+                        <ul class="small mb-0 ps-3">
+                            <li class="mb-2">Splitting one product into two role-specific experiences without duplicating backends</li>
+                            <li class="mb-2">Stock integrity awareness (read-validate-write before recording sales)</li>
+                            <li class="mb-2">Production-minded API consumption (env-based URLs, tolerant parsing)</li>
+                            <li class="mb-0">Operational UX for Arabic-first users (RTL, type scale, navigation stability)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

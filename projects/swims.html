@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Management System (SWMS) | Mohammed Waheed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="project-theme-swims">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Mohammed Waheed</a>
+            <a href="../index.html#projects" class="btn btn-sm btn-outline-light">Back to Projects</a>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-5 fw-bold project-hero-title-with-logo swims-hero-heading">
+                        <img src="../img/swms/app%20main%20logo.png" class="project-hero-inline-logo swims-hero-logo" width="80" height="80" alt="">
+                        <span class="swims-hero-title-lines">
+                            <span class="d-block">Smart Waste</span>
+                            <span class="d-block">Management System</span>
+                        </span>
+                    </h1>
+                    <p class="lead mb-2 text-white-50">SWMS · Arabic product framing «نظيف» · Cross-platform Flutter</p>
+                    <p class="mb-2"><strong>Cross-platform smart waste operations app</strong> that connects citizens, field workers, supervisors, and administrators on a single map-first experience—prioritizing urgent bins, guiding crews with real road routes, and turning citizen reports into actionable work.</p>
+                    <p class="text-white-50 small mb-3"><em>Alternate tagline:</em> From full bins to fixed routes—one Flutter app for the whole sanitation chain.</p>
+                    <p class="mb-2"><strong>My role:</strong> End-to-end Flutter client—architecture, multi-role UX, maps, routing, and domain modeling</p>
+                    <span class="badge me-1 text-bg-success">Material 3</span>
+                    <span class="badge me-1 text-bg-info text-dark">RTL-first (ar-SA)</span>
+                    <span class="badge text-bg-secondary">Server-ready repositories</span>
+                </div>
+                <div class="col-lg-5">
+                    <div class="swims-hero-artboard">
+                        <img src="../img/swms/app%20main%20logo.png" class="swims-hero-artboard-logo" alt="SWMS — Smart Waste Management System project logo (city, smart bin, connectivity)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="project-details-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="project-details-card mb-4">
+                        <h3>Overview</h3>
+                        <p>Urban waste infrastructure is spread out and opaque: people do not always know where the nearest bin is, whether it is safe to use, or how to escalate odor, leaks, or overflow. Operations teams lack a shared picture of container health (fill, gas risk, power) and clear priorities for who goes where first.</p>
+                        <p>SWMS is a <strong>digital operations layer</strong> for a municipality or private waste company: one mobile client with <strong>role-based experiences</strong> so the same codebase serves the public (discovery and reporting) and the workforce (execution and oversight). Ideation centered on the <strong>map as the primary surface</strong>, sensor-style bin intelligence, and <strong>Arabic-first UX</strong> for real deployment in MENA contexts.</p>
+                        <div class="project-highlight-grid mt-4">
+                            <div class="project-highlight-item">
+                                <i class="fas fa-map-location-dot"></i>
+                                <h5>Map-first</h5>
+                                <p>Citizens and workers live on Google Maps with OSRM-backed road geometry where possible.</p>
+                            </div>
+                            <div class="project-highlight-item">
+                                <i class="fas fa-users-gear"></i>
+                                <h5>Four roles</h5>
+                                <p>Citizen, worker, supervisor, and admin—strict route separation via go_router.</p>
+                            </div>
+                            <div class="project-highlight-item">
+                                <i class="fas fa-database"></i>
+                                <h5>Clean boundaries</h5>
+                                <p>Repository contracts so mock or SharedPreferences data swaps for REST without rewriting UI.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Problem</h3>
+                        <ul class="project-impact-list mb-0">
+                            <li><strong>Citizens</strong> waste time searching for bins, may encounter full or hazardous containers, and have no structured channel to report issues with evidence.</li>
+                            <li><strong>Field workers</strong> need ordered worklists, context (what is wrong, where, how severe), and navigation that respects roads—not only straight-line distance.</li>
+                            <li><strong>Supervisors</strong> must coordinate people, not just dots on a map: assignments, open work, and blocked items.</li>
+                            <li><strong>Administration</strong> needs organization-wide visibility—workforce scale, geography, and demand—for capacity and accountability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Solution</h3>
+                        <p>A Flutter application branded in-app as <strong>Smart Waste Management System (SWMS)</strong> with Material 3, <strong>RTL Arabic default</strong> (<code>Locale('ar', 'SA')</code>) and English in supported locales, responsive layout (<code>flutter_screenutil</code> and adaptive containers), and a green-forward visual system (Cairo via Google Fonts, seeded sustainability palette in app theme).</p>
+                        <p><strong>Bins are modeled as intelligent assets:</strong> fill percentage, gas level, battery and health, maintenance flag, timestamps, <strong>priority</strong> from operational rules (<code>BinEntity</code> / <code>calculatePriority</code>), and history readings—so the UI explains <em>why</em> something is urgent, not only <em>where</em> it is.</p>
+                        <ul class="project-impact-list">
+                            <li><strong>Citizens:</strong> map home (Google Maps), markers, road-following navigation via <strong>OSRM</strong> over HTTP (<code>UserRouteService</code>) with haversine fallback when routing fails.</li>
+                            <li><strong>Reporting:</strong> structured issues (forms, <code>image_picker</code>, severity) through <code>ReportBloc</code> and repository pattern, plus history so users see follow-through.</li>
+                            <li><strong>Workers:</strong> assigned jobs (e.g. cleaning vs fixing), status, locations, jobs + map with <code>BinBloc</code> for spatial context; accept/complete workflows at the repository boundary.</li>
+                            <li><strong>Supervisors:</strong> dashboard with nested routes—profile, worker management (including add worker), operational overview, tasks.</li>
+                            <li><strong>Admins:</strong> KPI-style cards (supervisors, workers, users, regions) and quick actions for supervisors, workers, and areas—the control tower view of the same ecosystem crews execute in the field.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Roles: who does what</h3>
+                        <p class="small text-muted mb-3">How to phrase it for stakeholders: <em>Admin sets the system; supervisors run the teams; workers close the loop on the ground; citizens supply ground truth through reports.</em></p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm align-middle mb-0 swims-roles-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">In the product</th>
+                                        <th scope="col">In the app</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Citizen</strong></td>
+                                        <td>Public stakeholder</td>
+                                        <td>Map of bins, bin details/history, OSRM-backed navigation where possible, report issues with media, report history.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Worker</strong></td>
+                                        <td>Execution</td>
+                                        <td>Dashboard and profile; jobs list with types and locations; map co-loaded with bins; accept/complete assignments.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Supervisor</strong></td>
+                                        <td>Middle management</td>
+                                        <td>Dashboard sub-routes: overview, tasks, worker roster, add worker—coordination between strategy and crews.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Admin</strong></td>
+                                        <td>Org owner</td>
+                                        <td>Org-wide statistics and quick actions for supervisors, workers, and geographic areas.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Design and UX</h3>
+                        <ul class="project-impact-list mb-0">
+                            <li><strong>Information hierarchy:</strong> map-first for citizens and workers; cards and sections for dashboards; primary green app bars and readable Arabic typography (Cairo).</li>
+                            <li><strong>RTL-native:</strong> conceived RTL-first for labels, navigation, and layout—not a translated LTR shell.</li>
+                            <li><strong>Polish:</strong> custom onboarding visuals, shared decorative surfaces, adaptive layouts (e.g. admin stats stack vs two-column on wider screens).</li>
+                            <li><strong>Trust and resilience:</strong> global error surfaces in <code>main.dart</code>; documented map degradation (placeholder/list fallback when Maps API key is missing) so demos do not hard-crash on misconfiguration.</li>
+                            <li><strong>Operations UX:</strong> explicit loading and error states on job loads for workers; shortcuts from home toward report and history for citizens.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mb-4">
+                        <h3>Case study deep dive</h3>
+                        <div class="story-chip-row">
+                            <span><i class="fas fa-lightbulb"></i> Ideation</span>
+                            <span><i class="fas fa-layer-group"></i> Architecture</span>
+                            <span><i class="fas fa-code"></i> Implementation</span>
+                            <span><i class="fas fa-triangle-exclamation"></i> Challenges</span>
+                            <span><i class="fas fa-flag-checkered"></i> Outcome</span>
+                        </div>
+                        <div class="accordion case-accordion mt-3" id="swimsCaseStudy">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="swimsH1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#swimsC1" aria-expanded="true" aria-controls="swimsC1">Engineering and architecture</button>
+                                </h2>
+                                <div id="swimsC1" class="accordion-collapse collapse show" aria-labelledby="swimsH1" data-bs-parent="#swimsCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list">
+                                            <li><strong>Stack:</strong> Flutter (Dart ^3.10), flutter_bloc, go_router (including nested supervisor routes), get_it (<code>ServiceLocator</code>), shared_preferences on auth/reports paths, google_maps_flutter, geolocator, http (OSRM), image_picker, intl, equatable.</li>
+                                            <li><strong>Structure:</strong> feature-oriented modules under <code>Features/</code> (auth, user, Worker, Superviser, Admin) plus shared core for bin domain and presentation.</li>
+                                            <li><strong>Clean boundaries:</strong> repository interfaces in domain layers, implementations in data—<code>AuthRepository</code>, <code>ReportRepository</code>, <code>WorkerJobRepository</code>, <code>BinRepository</code>—so BLoCs depend on contracts, not concrete APIs.</li>
+                                            <li><strong>Routing:</strong> role-specific entry paths (login/register/company password flows per <code>UserType</code> in <code>app_router.dart</code>).</li>
+                                            <li><strong>Product title in UI:</strong> <code>MaterialApp.router</code> title “Smart Waste Management System”—SWMS used consistently in portfolio and demos.</li>
+                                        </ul>
+                                        <p class="mb-0 small text-muted mt-2">The graduation notes in the repo describe current bin lists and some flows as local/mock or SharedPreferences-backed while the architecture is server-ready—the same screens and state machines can call REST or GraphQL once repository implementations point at your API.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="swimsH2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#swimsC2" aria-expanded="false" aria-controls="swimsC2">What I built (bullet summary)</button>
+                                </h2>
+                                <div id="swimsC2" class="accordion-collapse collapse" aria-labelledby="swimsH2" data-bs-parent="#swimsCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list mb-0">
+                                            <li>End-to-end Flutter client for a multi-role waste operations platform (citizen, worker, supervisor, admin).</li>
+                                            <li>RTL-first Arabic UX with Material 3, responsive layout, and map-centric flows.</li>
+                                            <li>Domain-driven bin modeling (fill, gas, battery, priority, history) and BLoC state management.</li>
+                                            <li>Google Maps + GPS + OSRM road routing with resilient fallbacks.</li>
+                                            <li>Clean Architecture–style repositories for auth, reports, jobs, and bins aligned with backend integration.</li>
+                                            <li>Hardening against misconfiguration and runtime errors (permissions, error handlers, map placeholder path).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="swimsH3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#swimsC3" aria-expanded="false" aria-controls="swimsC3">Challenges and how they were addressed</button>
+                                </h2>
+                                <div id="swimsC3" class="accordion-collapse collapse" aria-labelledby="swimsH3" data-bs-parent="#swimsCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list mb-0">
+                                            <li><strong>Multi-audience, one codebase:</strong> strict route separation, role-specific dashboards, and shared bin domain without duplicating map logic—go_router plus feature folders.</li>
+                                            <li><strong>Maps, permissions, stability:</strong> Android permissions, global error handling, graceful map fallback so the app stays usable when keys or GPS are imperfect.</li>
+                                            <li><strong>Arabic RTL + responsive density:</strong> RTL and ScreenUtil-based scaling for regional deployment, not a shrunk English layout.</li>
+                                            <li><strong>Realistic navigation without routing vendor lock-in:</strong> OSRM over HTTP with timeout and null-safe haversine fallback—demonstrable and cost-aware.</li>
+                                            <li><strong>Modeling urgency:</strong> priority from fill, gas, and time since last service so the map is actionable for operations storytelling, not decorative.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="swimsH4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#swimsC4" aria-expanded="false" aria-controls="swimsC4">Final product (demo narrative)</button>
+                                </h2>
+                                <div id="swimsC4" class="accordion-collapse collapse" aria-labelledby="swimsH4" data-bs-parent="#swimsCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list mb-0">
+                                            <li>One Flutter app that reads as four products: citizen map and reporting, worker job execution, supervisor coordination, admin KPI shell.</li>
+                                            <li><strong>Operational story:</strong> bins as living entities with trends; jobs as work orders; reports as closed-loop feedback from the city.</li>
+                                            <li><strong>Technical story:</strong> BLoC + repositories + DI + typed domain entities—the vocabulary expected for maintainable mobile work.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="project-details-card">
+                        <h3>Quick details</h3>
+                        <ul class="project-meta-list">
+                            <li><strong>Also known as:</strong> Swims / SWMS / «نظيف»</li>
+                            <li><strong>Role:</strong> Flutter client architecture + multi-role UX</li>
+                            <li><strong>Type:</strong> Smart waste operations (municipality or private operator)</li>
+                            <li><strong>Architecture:</strong> Features + BLoC + GetIt + go_router</li>
+                            <li><strong>Maps & routing:</strong> Google Maps, Geolocator, OSRM (HTTP)</li>
+                            <li><strong>Localization:</strong> Arabic (SA) default, English supported, RTL</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details-card mt-4">
+                        <h3>Card-ready blurbs</h3>
+                        <p class="small mb-2"><strong>Subtitle (60–90 chars):</strong></p>
+                        <p class="small fst-italic text-white-50 mb-3">Flutter SWMS: maps, citizen reports, worker jobs, supervisor ops, admin KPIs—RTL-first.</p>
+                        <p class="small mb-0"><strong>One-line pitch:</strong> Cross-platform smart waste operations app connecting citizens, crews, supervisors, and admins on one map-first experience.</p>
+                    </div>
+
+                    <div class="project-details-card mt-4">
+                        <h3>Arabic summary</h3>
+                        <p class="mb-0" dir="rtl" lang="ar">الفكرة: تطبيق <strong>نظام إدارة نفايات ذكي</strong> يربط المواطن بخريطة الحاويات والإبلاغ عن المشاكل، ويربط <strong>العامل</strong> بمهام مرتبة ومكانية، و<strong>المشرف</strong> بإدارة الفريق والمهام، و<strong>المدير</strong> بنظرة إحصائية وتشغيلية على المنظومة.</p>
+                        <p class="mb-0 mt-3" dir="rtl" lang="ar">التقنية: Flutter مع فصل الطبقات (Domain / Data / Presentation) وإدارة الحالة BLoC وتوجيه go_router، وخرائط Google مع مسارات طرق عبر OSRM، وتجربة عربية كاملة اتجاه RTL.</p>
+                    </div>
+
+                    <div class="project-details-card mt-4">
+                        <h3>Tech stack</h3>
+                        <div class="keyword-cloud">
+                            <span>Flutter</span><span>Dart</span><span>BLoC</span><span>go_router</span><span>get_it</span>
+                            <span>Google Maps</span><span>Geolocator</span><span>OSRM</span><span>Clean Architecture</span>
+                            <span>Repository pattern</span><span>Material 3</span><span>RTL</span><span>i18n</span>
+                            <span>Responsive UI</span><span>image_picker</span><span>shared_preferences</span><span>equatable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

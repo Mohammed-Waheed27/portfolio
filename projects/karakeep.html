@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karakeep | Mohammed Waheed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap">
+</head>
+<body class="project-theme-karakeep">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Mohammed Waheed</a>
+            <a href="../index.html#projects" class="btn btn-sm btn-outline-light">Back to Projects</a>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-5 fw-bold app-brand-title project-hero-title-with-logo"><img src="../img/krakeep/karakeep_logo.png" class="project-hero-inline-logo" alt="Karakeep Logo">Karakeep</h1>
+                    <p class="lead">Service Marketplace Mobile App</p>
+                    <p>Production-focused multi-application platform with customer journeys, worker operations, and role-based business workflows.</p>
+                    <p class="mb-2"><strong>My role:</strong> Flutter Developer, Product Owner, and UI/UX Designer</p>
+                    <div class="d-flex gap-2 flex-wrap align-items-center">
+                        <span class="badge text-bg-warning">In Review on Google Play</span>
+                        <a href="#karakeepTesterForm" class="btn btn-sm btn-outline-light">
+                            <i class="fas fa-flask me-1"></i>Become a Tester
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="../img/krakeep/karakeep_thumbnail.jpeg" class="project-hero-image" alt="Karakeep Thumbnail">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="project-details-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="project-details-card mb-4">
+                        <h3>Product Story</h3>
+                        <p>Karakeep is a multi-app recycling and service operations platform that turns manual collection workflows into a trackable digital system. It connects end users, field workers, and operations teams in one ecosystem focused on efficiency, trust, and scalable delivery.</p>
+                        <div class="project-highlight-grid mt-4">
+                            <div class="project-highlight-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <h5>Problem</h5>
+                                <p>Traditional collection is manual, unclear, and hard to track for users and teams.</p>
+                            </div>
+                            <div class="project-highlight-item">
+                                <i class="fas fa-bullseye"></i>
+                                <h5>Vision</h5>
+                                <p>A complete role-based ecosystem where service requests become measurable workflows.</p>
+                            </div>
+                            <div class="project-highlight-item">
+                                <i class="fas fa-gauge-high"></i>
+                                <h5>Value</h5>
+                                <p>Operational efficiency, user trust, and a strong foundation for multi-product growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details-card mb-4">
+                        <h3>Product Walkthrough</h3>
+                        <p class="mb-3">Key journeys across onboarding, order lifecycle, payments, tracking, and retention.</p>
+                        <div id="karakeepCarousel" class="carousel slide carousel-fade karakeep-carousel" data-bs-ride="carousel" data-bs-interval="3200">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#karakeepCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/krakeep/Frame 1.png" class="d-block w-100" alt="Karakeep onboarding and first impression flow">
+                                    <div class="carousel-caption">
+                                        <h5>Onboarding</h5>
+                                        <p>Fast and clear first impression.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/krakeep/Frame 2.png" class="d-block w-100" alt="Karakeep service discovery and category experience">
+                                    <div class="carousel-caption">
+                                        <h5>Discovery</h5>
+                                        <p>Category and search-led flow.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/krakeep/Frame 3.png" class="d-block w-100" alt="Karakeep worker profile and trust indicators">
+                                    <div class="carousel-caption">
+                                        <h5>Trust Layer</h5>
+                                        <p>Profiles and confidence signals.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/krakeep/Frame 4.png" class="d-block w-100" alt="Karakeep booking, scheduling, and order details screen">
+                                    <div class="carousel-caption">
+                                        <h5>Order Setup</h5>
+                                        <p>Guided multi-step booking.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/krakeep/Frame 5.png" class="d-block w-100" alt="Karakeep checkout and payment confirmation flow">
+                                    <div class="carousel-caption">
+                                        <h5>Checkout</h5>
+                                        <p>Payment and redemption clarity.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/krakeep/Frame 6.png" class="d-block w-100" alt="Karakeep order tracking and real-time status updates">
+                                    <div class="carousel-caption">
+                                        <h5>Tracking</h5>
+                                        <p>Status transparency in real time.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/krakeep/Frame 7.png" class="d-block w-100" alt="Karakeep worker operational dashboard and task flow">
+                                    <div class="carousel-caption">
+                                        <h5>Worker Flow</h5>
+                                        <p>Field execution-first experience.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/krakeep/Frame 8 (1).png" class="d-block w-100" alt="Karakeep account settings and retention features">
+                                    <div class="carousel-caption">
+                                        <h5>Retention</h5>
+                                        <p>Profile and repeat-use support.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#karakeepCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#karakeepCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-details-card mt-4">
+                        <h3>Case Study</h3>
+                        <div class="story-chip-row">
+                            <span><i class="fas fa-circle-info"></i> Problem</span>
+                            <span><i class="fas fa-bullseye"></i> Vision</span>
+                            <span><i class="fas fa-users"></i> Personas</span>
+                            <span><i class="fas fa-wand-magic-sparkles"></i> UX</span>
+                            <span><i class="fas fa-cubes"></i> Scope</span>
+                            <span><i class="fas fa-server"></i> Tech</span>
+                            <span><i class="fas fa-screwdriver-wrench"></i> Challenges</span>
+                        </div>
+                        <div class="accordion case-accordion mt-3" id="karakeepCaseStudy">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Problem Statement
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#karakeepCaseStudy">
+                                    <div class="accordion-body">
+                                        <p>Users with recyclable or waste items often face unclear pricing, no live status visibility, and fragmented service channels. Karakeep digitizes this end-to-end journey with role-specific flows for user requests, worker execution, and admin control.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Product Vision
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#karakeepCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list">
+                                            <li>Enable users to request and track service in minutes with trusted, transparent workflows.</li>
+                                            <li>Help workers execute assigned tasks efficiently with clear state transitions in the field.</li>
+                                            <li>Provide admins full operational control across orders, workers, centers, and exceptions.</li>
+                                            <li>Scale as a platform ecosystem (user + worker + admin), not a single isolated application.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Target Personas
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#karakeepCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list">
+                                            <li><strong>End Users:</strong> need simple request flows, transparent tracking, and clear redemption/payment options.</li>
+                                            <li><strong>Field Workers:</strong> need assigned jobs, location context, and reliable status update tools.</li>
+                                            <li><strong>Operations/Admin:</strong> need assignments, governance, monitoring, and escalation handling.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        UX Strategy & Design Decisions
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#karakeepCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list">
+                                            <li>Multi-step order wizard to prevent overload and improve completion quality.</li>
+                                            <li>Real-time value/points preview before submission to improve decision confidence.</li>
+                                            <li>Bottom navigation with shell routing for stable core journeys.</li>
+                                            <li>Arabic RTL-first interaction model and responsive sizing across devices.</li>
+                                            <li>Consistent feedback states (loading, error, confirmations) for better trust.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Core Functional Scope
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#karakeepCaseStudy">
+                                    <div class="accordion-body">
+                                        <h5 class="case-subtitle">User App (Implemented)</h5>
+                                        <ul class="project-impact-list">
+                                            <li>Register/login, OTP verification, forgot/reset password, and session persistence.</li>
+                                            <li>Order creation with validations and optional image upload.</li>
+                                            <li>Marketplace/redeem integration with points logic.</li>
+                                            <li>Order history, active/completed states, details, profile, and support flows.</li>
+                                        </ul>
+                                        <h5 class="case-subtitle mt-3">Worker App (Android / Web - In Progress)</h5>
+                                        <ul class="project-impact-list">
+                                            <li>Assigned job intake, operational state updates, and field execution feedback.</li>
+                                        </ul>
+                                        <h5 class="case-subtitle mt-3">Admin Platform (Android / Web - In Progress)</h5>
+                                        <ul class="project-impact-list">
+                                            <li>Operational supervision, assignment governance, and escalation handling.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        Backend Integration & Engineering Quality
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#karakeepCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list">
+                                            <li>Dio-based REST integration with domain-specific service layers.</li>
+                                            <li>Interceptors for token injection, connectivity checks, and unified error mapping.</li>
+                                            <li>Secure token/session handling with clean DI setup using GetIt.</li>
+                                            <li>Clean Architecture boundaries across domain, data, and presentation.</li>
+                                            <li>Feature-first modularization for maintainability, onboarding speed, and scalable delivery.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        Key Challenges & Solutions
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#karakeepCaseStudy">
+                                    <div class="accordion-body">
+                                        <ul class="project-impact-list">
+                                            <li><strong>Complex order flow:</strong> solved with dedicated Cubit state and step-level validation.</li>
+                                            <li><strong>Session reliability:</strong> solved with explicit validation flow and auth interceptors.</li>
+                                            <li><strong>API response consistency:</strong> solved with reusable parsing and standardized exceptions.</li>
+                                            <li><strong>RTL responsiveness:</strong> solved with RTL-aware components and screen scaling rules.</li>
+                                            <li><strong>Ecosystem scale:</strong> solved with role-based architecture and extensible routing boundaries.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="project-details-card">
+                        <h3>Quick Details</h3>
+                        <ul class="project-meta-list">
+                            <li><strong>Role:</strong> Flutter Developer + UI/UX Designer + Product Idea Owner</li>
+                            <li><strong>Year:</strong> 2026</li>
+                            <li><strong>Architecture:</strong> Clean Architecture</li>
+                            <li><strong>Tech:</strong> Flutter, BLoC, Dio, GetIt, go_router</li>
+                            <li><strong>Platform:</strong> Android (published), Worker/Admin apps in progress on Android and Web</li>
+                            <li><strong>Focus:</strong> Recycling operations, Orders, Payments, Role-based flows</li>
+                            <li><strong>Collaboration:</strong> Backend developed by Osama Omar (.NET)</li>
+                        </ul>
+                    </div>
+                    <div class="project-details-card mt-4">
+                        <h3>Become a Tester</h3>
+                        <p class="mb-3">Join Karakeep early access through WhatsApp. Enter your email and we will prefill your tester request message.</p>
+                        <form id="karakeepTesterForm" class="mb-3">
+                            <label for="testerEmail" class="form-label">Your Gmail</label>
+                            <input id="testerEmail" type="email" class="form-control mb-2" placeholder="you@gmail.com" required>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fab fa-whatsapp me-2"></i>Contact Me to Become a Tester
+                            </button>
+                        </form>
+                        <div class="d-flex gap-2 flex-wrap mb-3">
+                            <span class="badge text-bg-success">Tester Access Open</span>
+                            <span class="badge text-bg-info">App Store Coming Soon</span>
+                        </div>
+                        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm w-100 mb-3">
+                            <i class="fab fa-google-play me-2"></i>Google Play Launch Channel
+                        </a>
+                        <div class="text-center">
+                            <p class="small mb-2">Scan to contact on WhatsApp and join testing now</p>
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fwa.me%2F01270640035" alt="Karakeep tester WhatsApp QR code" class="img-fluid rounded border border-light border-opacity-25">
+                        </div>
+                    </div>
+                    <div class="project-details-card mt-4">
+                        <h3>Official Pages</h3>
+                        <p class="mb-3">Follow Karakeep on social media.</p>
+                        <a href="https://www.facebook.com/share/1AY11MCWER/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm w-100 mb-2">
+                            <i class="fab fa-facebook me-2"></i>Facebook Page
+                        </a>
+                        <a href="https://www.tiktok.com/@karakeb.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm w-100">
+                            <i class="fab fa-tiktok me-2"></i>TikTok Page
+                        </a>
+                    </div>
+                    <div class="project-details-card mt-4">
+                        <h3>My Contribution</h3>
+                        <ul class="project-impact-list">
+                            <li>Took the original product idea from concept stage and transformed it into a real shipped mobile application.</li>
+                            <li>Owned UI/UX direction end-to-end, including user journeys, screen structure, interaction logic, and visual consistency.</li>
+                            <li>Designed and implemented the Flutter architecture, feature modules, and scalable project boundaries.</li>
+                            <li>Built auth/session lifecycle, order lifecycle flows, and resilient API consumption patterns in the app layer.</li>
+                            <li>Structured navigation/state for long-term growth using GoRouter and BLoC/Cubit with clean separation of concerns.</li>
+                            <li>Led Arabic RTL and responsive design quality to ensure production-ready usability across devices.</li>
+                            <li>Collaborated closely with Osama Omar (.NET backend developer) to align APIs with product and UX requirements.</li>
+                        </ul>
+                    </div>
+                    <div class="project-details-card mt-4">
+                        <h3>Final Outcome</h3>
+                        <ul class="project-impact-list">
+                            <li>Production-ready Flutter app published with scalable ecosystem direction.</li>
+                            <li>Demonstrates product thinking + architecture + execution, not UI only.</li>
+                            <li>Prepared foundation for worker and admin product tracks on shared backend.</li>
+                        </ul>
+                    </div>
+                    <div class="project-details-card mt-4">
+                        <div class="keyword-cloud">
+                            <span>Flutter</span><span>Dart</span><span>Clean Architecture</span><span>BLoC</span><span>Cubit</span>
+                            <span>GoRouter</span><span>GetIt</span><span>Dio</span><span>REST API</span><span>Authentication</span>
+                            <span>OTP Verification</span><span>Session Management</span><span>Secure Storage</span>
+                            <span>Role-Based Access</span><span>Order Management</span><span>Admin Dashboard</span>
+                            <span>Worker App</span><span>RTL</span><span>Arabic UX</span><span>Responsive Design</span>
+                            <span>Mobile System Design</span><span>Production App</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/project-carousel.js"></script>
+    <script>
+        (function () {
+            const form = document.getElementById("karakeepTesterForm");
+            if (!form) return;
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const emailInput = document.getElementById("testerEmail");
+                const email = emailInput ? emailInput.value.trim() : "";
+
+                if (!email) return;
+
+                const message = "Hi Mohammed, I want to become a tester for Karakeep. My Gmail is: " + email;
+                const whatsappUrl = "https://wa.me/01270640035?text=" + encodeURIComponent(message);
+                window.open(whatsappUrl, "_blank");
+            });
+        })();
+    </script>
+</body>
+</html>
